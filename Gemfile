@@ -13,6 +13,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jbuilder'
 
 group :development, :test do
 	gem 'rspec-rails'
@@ -24,4 +25,6 @@ end
 group :test do
 	gem 'cucumber-rails', require: false
 	gem 'database_cleaner'
+	gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git'
+    gem 'shoulda-callback-matchers'
 end
