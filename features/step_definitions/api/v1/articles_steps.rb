@@ -13,7 +13,7 @@ end
 
 Then(/^I should only receive published articles as JSON$/) do
 	articles_json = JSON last_response.body
-	articles_json.should have(3).published_articles
+	articles_json.should eq(3).published_articles
 
 	published_articles = Article.all.select { |a| a.published? }
 	published_articles.should_not be_empty
