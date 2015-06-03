@@ -10,9 +10,9 @@ RSpec.describe Article, type: :model do
   	end
 
   	it "only return published articles" do
-  	  @published.should_not be_empty
+  	  expect(@published).not_to be_empty
   	  @published.each do |article|
-  	  	article.should be_published
+  	  	expect(article).to be_published
   	  end
   	end
   end
